@@ -1,0 +1,36 @@
+[project]
+name = "founderlens_ai"
+version = "1.0.0"
+description = "FounderLens_Ai using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai[google-genai,tools]==1.14.4",
+    "sentence-transformers>=3.0.0",
+    "fastapi>=0.110.0",
+    "uvicorn>=0.27.0",
+    "pymupdf>=1.23.0",
+    "pandas>=2.2.0",
+    "beautifulsoup4>=4.12.0",
+    "requests>=2.31.0",
+    "python-multipart>=0.0.9",
+    "supabase>=2.30.0",
+    "langchain-community>=0.4.1",
+    "duckduckgo-search<6",
+    "langchain-openai>=0.1.0",
+]
+
+[project.scripts]
+founderlens_ai = "founderlens_ai.main:run"
+run_crew = "founderlens_ai.main:run"
+train = "founderlens_ai.main:train"
+replay = "founderlens_ai.main:replay"
+test = "founderlens_ai.main:test"
+run_with_trigger = "founderlens_ai.main:run_with_trigger"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_dashboard"
+        android:icon="@drawable/ic_dashboard"
+        android:title="@string/nav_dashboard" />
+
+    <item
+        android:id="@+id/nav_upload"
+        android:icon="@drawable/ic_upload"
+        android:title="@string/nav_upload" />
+
+    <item
+        android:id="@+id/nav_insights"
+        android:icon="@drawable/ic_insights"
+        android:title="@string/nav_insights" />
+
+    <item
+        android:id="@+id/nav_simulation"
+        android:icon="@drawable/ic_simulation"
+        android:title="@string/nav_simulation" />
+
+    <item
+        android:id="@+id/nav_trace"
+        android:icon="@drawable/ic_trace"
+        android:title="@string/nav_trace" />
+
+</menu>

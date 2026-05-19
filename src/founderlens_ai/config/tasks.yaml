@@ -1,0 +1,399 @@
+intake_task:
+  description: >
+    Parse, validate, clean, classify, and normalize all provided business data sources into a
+    unified structured format suitable for downstream analysis and reasoning agents.
+
+    Input data sources:
+    {data_sources}
+
+    Processing requirements:
+    - Support structured, semi-structured, and unstructured business inputs
+    - Extract operational metrics, timestamps, entities, trends, risks, events, and signals
+    - Preserve source attribution and metadata for every extracted item
+    - Detect missing values, malformed structures, stale information, duplicate entries, noisy data,
+      low-confidence content, and unsupported formats
+    - Assign confidence and credibility indicators where possible
+    - Never fabricate missing information
+    - Never silently discard conflicting or corrupted inputs
+    - Normalize all timestamps and numerical formats consistently
+    - Generate machine-readable structured output for downstream agents
+
+    Response requirements:
+    - Respond ONLY with valid JSON
+    - No markdown
+    - No explanations
+    - No preamble text
+    - Ensure schema consistency and valid formatting
+
+  expected_output: >
+    {
+      "parsed_sources": [
+        {
+          "source_id": "string",
+          "source_type": "pdf|csv|json|web|dashboard|text|feed",
+          "source_name": "string",
+          "timestamp": "ISO-8601 datetime",
+          "credibility_score": 0-100,
+          "confidence_score": 0-100,
+          "status": "valid|partial|stale|corrupted|duplicate|unsupported",
+          "extracted_entities": [],
+          "key_metrics": {},
+          "detected_signals": [],
+          "raw_summary": "string"
+        }
+      ],
+      "data_quality_score": 0-100,
+      "missing_fields": [],
+      "duplicate_sources": [],
+      "stale_sources": [],
+      "unsupported_sources": [],
+      "warnings": [],
+      "normalization_notes": []
+    }
+
+  agent: intake_agent
+
+insight_task:
+  description: >
+    Analyze the fully parsed and normalized business dataset produced by the intake agent and
+    extract high-confidence, actionable business intelligence.
+
+    Input:
+    Parsed data structure from intake_task
+
+    Objectives:
+    - Identify meaningful trends (growth, decline, behavioral shifts, operational changes)
+    - Detect risks (financial, operational, customer, market, system-level)
+    - Identify opportunities (growth vectors, optimization areas, untapped signals)
+    - Detect anomalies (statistical outliers, sudden spikes/drops, irregular patterns)
+    - Correlate signals across multiple sources to strengthen validity
+    - Prioritize insights based on business impact and urgency
+    - Avoid vague or generic statements — all insights must be evidence-based
+    - Ensure every insight is traceable to at least one data source or metric
+    - Assign severity and confidence where applicable
+
+    Rules:
+    - Do NOT hallucinate insights not supported by data
+    - Do NOT repeat raw data without interpretation
+    - Focus on actionable intelligence, not summaries
+    - Resolve noise vs signal where possible before reporting insights
+
+    Response requirements:
+    - Respond ONLY in valid JSON
+    - No markdown
+    - No explanations
+    - No preamble text
+
+  expected_output: >
+    {
+      "trends": [
+        {
+          "title": "string",
+          "description": "string",
+          "evidence": ["source_id or metric reference"],
+          "impact_level": "low|medium|high|critical",
+          "confidence": 0-100
+        }
+      ],
+      "risks": [
+        {
+          "title": "string",
+          "description": "string",
+          "evidence": ["source_id or metric reference"],
+          "severity": 1-10,
+          "confidence": 0-100
+        }
+      ],
+      "opportunities": [
+        {
+          "title": "string",
+          "description": "string",
+          "evidence": ["source_id or metric reference"],
+          "impact_level": "low|medium|high|critical",
+          "confidence": 0-100
+        }
+      ],
+      "anomalies": [
+        {
+          "title": "string",
+          "description": "string",
+          "evidence": ["source_id or metric reference"],
+          "anomaly_type": "spike|drop|outlier|inconsistency|pattern_break",
+          "confidence": 0-100
+        }
+      ],
+      "severity_score": 1-10
+    }
+
+  agent: insight_agent
+
+conflict_task:
+  description: >
+    Analyze the normalized dataset produced by the intake agent and detect all contradictions,
+    inconsistencies, and conflicts across data sources.
+
+    Input:
+    Parsed and normalized business dataset from intake_task
+
+    Objectives:
+    - Identify conflicting values for the same metric across multiple sources
+    - Detect stale vs recent data conflicts using timestamps
+    - Evaluate source credibility and assign relative trust scores
+    - Identify inconsistencies in reported trends, KPIs, or events
+    - Distinguish between true contradictions and contextual differences
+    - Resolve conflicts where possible using evidence-based logic
+    - Explicitly flag unresolved or ambiguous conflicts instead of forcing resolution
+    - Provide reasoning for why a source is considered more or less reliable
+
+    Rules:
+    - Never assume missing data to resolve contradictions
+    - Never force a single “correct” answer when evidence is unclear
+    - Always preserve all conflicting values with source attribution
+    - Use timestamp + credibility + consistency as primary resolution signals
+    - Maintain full traceability of decision logic
+
+    Response requirements:
+    - Respond ONLY in valid JSON
+    - No markdown
+    - No explanations outside JSON
+    - No preamble text
+
+  expected_output: >
+    {
+      "contradictions": [
+        {
+          "metric": "string",
+          "conflicting_values": [
+            {
+              "value": "any",
+              "source_id": "string",
+              "timestamp": "ISO-8601",
+              "credibility_score": 0-100
+            }
+          ],
+          "analysis": "string",
+          "resolution": "resolved|unresolved|partially_resolved",
+          "resolved_value": "any|null",
+          "reasoning": "string"
+        }
+      ],
+      "data_reliability_score": 0-100,
+      "source_ranking": [
+        {
+          "source_id": "string",
+          "reliability_score": 0-100,
+          "reason": "string"
+        }
+      ],
+      "unresolved_flags": [
+        {
+          "issue": "string",
+          "impact": "low|medium|high|critical"
+        }
+      ]
+    }
+
+  agent: conflict_agent
+
+planning_task:
+  description: >
+    Using the outputs from the insight agent and conflict resolution agent, generate a structured,
+    realistic, and constraint-aware 3–5 step action chain that directly addresses the most critical
+    business issues identified in the system.
+
+    Input:
+    - Insights (trends, risks, opportunities, anomalies)
+    - Conflict analysis (resolved and unresolved contradictions)
+    - Data reliability context
+
+    Objectives:
+    - Design a clear, sequential 3–5 step action chain
+    - Ensure each step logically depends on or improves the previous step
+    - Prioritize high-impact, feasible, and measurable actions
+    - Ensure every action is grounded in detected insights and not speculative
+    - MANDATORY: Use the `constraint_validation_tool` to validate every single step of your action chain against budget, time, and urgency constraints BEFORE finalizing.
+    - Consider constraints such as urgency, cost, feasibility, and data uncertainty
+    - Include target metrics for each action (what is expected to improve or change)
+    - Avoid generic advice; every action must be operational and specific
+    - Ensure actions collectively form a coherent execution strategy (not isolated tasks)
+
+    Rules:
+    - Do NOT generate actions that are not justified by insights
+    - Do NOT exceed 5 steps
+    - Do NOT include vague actions like "improve performance" without measurable targets
+    - Maintain logical dependency between steps
+    - Prefer realistic execution over aggressive optimization assumptions
+
+    Response requirements:
+    - Respond ONLY in valid JSON
+    - No markdown
+    - No explanations
+    - No preamble text
+
+  expected_output: >
+    {
+      "action_chain": [
+        {
+          "step": 1,
+          "action": "string",
+          "target_metric": "string",
+          "expected_impact": "string",
+          "priority": "HIGH|MED|LOW"
+        }
+      ],
+      "constraints_considered": [
+        {
+          "type": "budget|time|resource|data_uncertainty|technical_limit",
+          "description": "string"
+        }
+      ],
+      "rationale": "string"
+    }
+
+  agent: action_planner_agent
+
+simulation_task:
+  description: >
+    Execute a structured simulation of the planned 3–5 step action chain generated by the action
+    planner agent and model its impact on business KPIs, operational state, and system metrics.
+
+    Input:
+    - Action chain from planning_task
+    - Baseline business state (before_state inferred from intake + insights + conflict resolution)
+    - Constraints and assumptions provided by upstream agents
+
+    Objectives:
+    - Simulate each action step sequentially and update system state after each step
+    - Compute realistic KPI changes based on business logic, benchmarks, and causal relationships
+    - Reflect cascading effects where one action influences multiple metrics
+    - Maintain consistency between before_state, intermediate states, and after_state
+    - Capture execution logs for every simulated action step
+    - Include side effects, delays, or partial impacts if applicable
+    - Ensure changes are plausible, not exaggerated or random
+    - Preserve traceability between actions and resulting metric changes
+
+    Rules:
+    - Do NOT invent unrelated metrics
+    - Do NOT apply uniform or unrealistic improvements across all KPIs
+    - Ensure each KPI change is justified by at least one action
+    - Simulate both positive and negative side effects where appropriate
+    - Maintain deterministic reasoning based on input context
+    - Keep state transitions consistent across execution steps
+
+    Response requirements:
+    - Respond ONLY in valid JSON
+    - No markdown
+    - No explanations
+    - No preamble text
+
+  expected_output: >
+    {
+      "before_state": {
+        "metrics": {
+          "example_metric": "value"
+        }
+      },
+      "execution_log": [
+        {
+          "step": 1,
+          "action": "string",
+          "result": "string",
+          "kpi_changes": {
+            "metric_name": "change_description"
+          },
+          "status": "success|partial|failed|recovered"
+        }
+      ],
+      "intermediate_states": [
+        {
+          "step": 1,
+          "state": {
+            "metrics": {}
+          }
+        }
+      ],
+      "after_state": {
+        "metrics": {
+          "example_metric": "value"
+        }
+      },
+      "improvement_summary": "string",
+      "side_effects": [
+        {
+          "effect": "string",
+          "impact": "positive|negative|neutral"
+        }
+      ],
+      "confidence": "HIGH|MEDIUM|LOW"
+    }
+
+  agent: simulation_agent
+
+recovery_task:
+  description: >
+    Review the outputs from all previous agents in the pipeline (intake, insight, conflict,
+    planning, and simulation). Detect failures, missing information, inconsistencies, incomplete
+    outputs, low-confidence results, or execution breakdowns, and ensure the system still produces
+    a complete, usable final result.
+
+    Input:
+    - Outputs from all previous tasks in the agent pipeline
+    - Any detected errors, missing fields, or failed executions
+    - Intermediate states from simulation and planning agents
+
+    Objectives:
+    - Detect incomplete, corrupted, or inconsistent outputs across the pipeline
+    - Identify missing critical fields or broken reasoning chains
+    - Attempt recovery using available partial data without hallucinating new facts
+    - Ensure the final output remains structured, usable, and traceable
+    - Merge partial results where possible into a coherent final dataset
+    - Flag unresolved issues clearly instead of ignoring them
+    - Downgrade gracefully if full recovery is not possible (partial success mode)
+    - Ensure no silent failures exist in the final system output
+
+    Recovery rules:
+    - Never invent missing business data
+    - Never overwrite valid outputs unless clearly corrupted
+    - Prefer partial recovery over full failure
+    - Preserve all warnings and uncertainty flags
+    - Maintain traceability of what was recovered vs original
+
+    Response requirements:
+    - Respond ONLY in valid JSON
+    - No markdown
+    - No preamble text
+    - No explanations outside JSON
+
+  expected_output: >
+    {
+      "final_status": "success|partial",
+      "recovered_data": {
+        "intake": {},
+        "insight": {},
+        "conflict": {},
+        "planning": {},
+        "simulation": {}
+      },
+      "issues_detected": [
+        {
+          "stage": "string",
+          "issue": "string",
+          "severity": "low|medium|high|critical",
+          "resolution": "string"
+        }
+      ],
+      "warnings": [
+        {
+          "type": "missing_data|inconsistency|low_confidence|partial_execution",
+          "message": "string"
+        }
+      ],
+      "fallback_actions_taken": [
+        {
+          "action": "string",
+          "reason": "string"
+        }
+      ]
+    }
+
+  agent: recovery_agent

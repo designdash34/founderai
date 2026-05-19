@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:paddingBottom="100dp"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="24dp">
+
+            <!-- Clean Onboarding Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="20dp">
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Upload Business Info"
+                    android:textColor="@color/color_text_primary"
+                    android:textSize="26sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textStyle="bold" />
+                    
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add startup details to get strategic AI boardroom insights."
+                    android:textColor="@color/color_text_secondary"
+                    android:textSize="13sp"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <!-- 1. Startup/Project Idea Card -->
+            <TextView 
+                android:layout_width="match_parent" 
+                android:layout_height="wrap_content"
+                android:text="💡  Enter your startup or project idea"
+                android:textColor="@color/color_text_primary"
+                android:textSize="15sp" 
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginBottom="8dp" />
+                
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@color/color_card"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextInputStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="e.g., An AI-powered fitness app that automatically generates workout videos.">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_business_problem"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minLines="1"
+                            android:textColor="@color/color_text_primary"
+                            android:textColorHint="@color/color_text_tertiary"
+                            android:fontFamily="sans-serif"
+                            android:textSize="13sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- 2. Premium Document & Spreadsheet Upload Card -->
+            <TextView 
+                android:layout_width="match_parent" 
+                android:layout_height="wrap_content"
+                android:text="📁  Reports &amp; Data Spreadsheets"
+                android:textColor="@color/color_text_primary"
+                android:textSize="15sp" 
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginBottom="8dp" />
+                
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@color/color_card"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <!-- PDF Upload Row -->
+                    <LinearLayout
+                        android:id="@+id/zone_pdf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/bg_upload_zone"
+                        android:padding="14dp"
+                        android:clickable="true"
+                        android:focusable="true">
+                        
+                        <TextView 
+                            android:layout_width="wrap_content" 
+                            android:layout_height="wrap_content"
+                            android:text="📄"
+                            android:textSize="28sp" />
+                            
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginStart="14dp"
+                            android:layout_marginEnd="8dp">
+                            
+                            <TextView 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content"
+                                android:text="Business Report (PDF)"
+                                android:textColor="@color/color_text_primary"
+                                android:textSize="14sp" 
+                                android:fontFamily="sans-serif-medium" />
+                                
+                            <TextView 
+                                android:id="@+id/tv_pdf_selected"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Tap to select report..."
+                                android:textColor="@color/color_text_tertiary"
+                                android:textSize="12sp"
+                                android:fontFamily="sans-serif"
+                                android:layout_marginTop="2dp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SELECT"
+                            android:textColor="@color/color_primary"
+                            android:background="@drawable/bg_badge"
+                            android:paddingHorizontal="12dp"
+                            android:paddingVertical="6dp"
+                            android:textSize="11sp"
+                            android:fontFamily="sans-serif-medium" />
+                    </LinearLayout>
+
+                    <!-- Divider -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/color_divider"
+                        android:layout_marginVertical="12dp" />
+
+                    <!-- CSV/Spreadsheet Upload Row -->
+                    <LinearLayout
+                        android:id="@+id/zone_csv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/bg_upload_zone"
+                        android:padding="14dp"
+                        android:clickable="true"
+                        android:focusable="true">
+                        
+                        <TextView 
+                            android:layout_width="wrap_content" 
+                            android:layout_height="wrap_content"
+                            android:text="📊"
+                            android:textSize="28sp" />
+                            
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginStart="14dp"
+                            android:layout_marginEnd="8dp">
+                            
+                            <TextView 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content"
+                                android:text="Metrics Spreadsheet (CSV/JSON)"
+                                android:textColor="@color/color_text_primary"
+                                android:textSize="14sp" 
+                                android:fontFamily="sans-serif-medium" />
+                                
+                            <TextView 
+                                android:id="@+id/tv_csv_selected"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Tap to select spreadsheet..."
+                                android:textColor="@color/color_text_tertiary"
+                                android:textSize="12sp"
+                                android:fontFamily="sans-serif"
+                                android:layout_marginTop="2dp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SELECT"
+                            android:textColor="@color/color_secondary"
+                            android:background="@drawable/bg_badge"
+                            android:paddingHorizontal="12dp"
+                            android:paddingVertical="6dp"
+                            android:textSize="11sp"
+                            android:fontFamily="sans-serif-medium" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- 3. Website URL Card -->
+            <TextView 
+                android:layout_width="match_parent" 
+                android:layout_height="wrap_content"
+                android:text="🌐  Add Website Links"
+                android:textColor="@color/color_text_primary"
+                android:textSize="15sp" 
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginBottom="8dp" />
+                
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@color/color_card"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/TextInputStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="https://example.com"
+                            android:layout_marginEnd="10dp">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_url"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textUri"
+                                android:textColor="@color/color_text_primary"
+                                android:fontFamily="sans-serif"
+                                android:textSize="13sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:id="@+id/btn_add_url"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="17dp"
+                            android:text="ADD"
+                            android:background="@drawable/bg_badge"
+                            android:textColor="@color/color_primary"
+                            android:textSize="11sp"
+                            android:fontFamily="sans-serif-medium"
+                            android:paddingHorizontal="12dp"
+                            android:paddingVertical="6dp"
+                            android:clickable="true"
+                            android:focusable="true" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_url_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:textSize="12sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:visibility="gone" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_urls"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false"
+                        android:layout_marginTop="8dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- 4. Real-time Feed Card -->
+            <LinearLayout 
+                android:layout_width="match_parent" 
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" 
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+                <TextView 
+                    android:layout_width="0dp" 
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" 
+                    android:text="📡  Paste Raw JSON Feed"
+                    android:textColor="@color/color_text_primary"
+                    android:textSize="15sp" 
+                    android:fontFamily="sans-serif-medium" />
+                
+                <TextView
+                    android:id="@+id/tv_feed_status"
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content"
+                    android:text="● LIVE" 
+                    android:textColor="@color/color_error"
+                    android:background="#1AEF4444"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:textSize="10sp" 
+                    android:fontFamily="sans-serif-medium" />
+            </LinearLayout>
+            
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_feed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@color/color_card"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextInputStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Paste any raw JSON data logs here (optional)...">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_feed"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minLines="2"
+                            android:maxLines="4"
+                            android:inputType="textMultiLine"
+                            android:textColor="@color/color_text_primary"
+                            android:fontFamily="sans-serif"
+                            android:textSize="13sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- 5. Table / Dashboard Card -->
+            <TextView 
+                android:layout_width="match_parent" 
+                android:layout_height="wrap_content"
+                android:text="📋  Paste Dashboard Metrics"
+                android:textColor="@color/color_text_primary"
+                android:textSize="15sp" 
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginBottom="8dp" />
+                
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_table"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:cardBackgroundColor="@color/color_card"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextInputStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Paste your KPI numbers, dashboard exports or table text here (optional)...">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_table_data"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minLines="3"
+                            android:maxLines="6"
+                            android:inputType="textMultiLine"
+                            android:textColor="@color/color_text_primary"
+                            android:fontFamily="sans-serif"
+                            android:textSize="13sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- 6. Premium Quick Start Card (ID btn_load_demo) -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btn_load_demo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/color_card"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+                    
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="8dp">
+                        
+                        <TextView 
+                            android:layout_width="0dp" 
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="⚡  Quick Start Scenario"
+                            android:textColor="@color/color_secondary"
+                            android:textSize="15sp" 
+                            android:fontFamily="sans-serif-medium" />
+                            
+                        <TextView
+                            android:id="@+id/tv_badge_recommended"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="RECOMMENDED"
+                            android:textColor="@color/color_background"
+                            android:background="@color/color_secondary"
+                            android:paddingHorizontal="8dp"
+                            android:paddingVertical="3dp"
+                            android:textSize="9sp"
+                            android:fontFamily="sans-serif-medium" />
+                    </LinearLayout>
+                    
+                    <TextView 
+                        android:layout_width="match_parent" 
+                        android:layout_height="wrap_content"
+                        android:text="No documents on your device? Tap anywhere on this card to instantly load a full test scenario."
+                        android:textColor="@color/color_text_secondary"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Active Data Types Indicator Chips -->
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/cg_data_types"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:chipSpacingHorizontal="8dp" />
+
+            <!-- Baseline Model Toggle Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@color/color_card"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+                    
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switch_baseline"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="⚖️  Use Simple Baseline Model"
+                        android:textColor="@color/color_text_primary"
+                        android:textSize="15sp"
+                        android:fontFamily="sans-serif-medium" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Launch Simulation Action Button -->
+            <Button
+                android:id="@+id/btn_process"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="🚀  START AI PROCESSING"
+                android:background="@drawable/bg_button_primary"
+                android:textColor="@color/color_text_primary"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif-medium"
+                android:stateListAnimator="@null"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Real-time Processing Pipeline Trace -->
+            <LinearLayout
+                android:id="@+id/layout_processing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_marginTop="16dp"
+                android:paddingBottom="24dp">
+                
+                <TextView 
+                    android:layout_width="match_parent" 
+                    android:layout_height="wrap_content"
+                    android:text="AI is processing your data..."
+                    android:textColor="@color/color_text_primary"
+                    android:textSize="15sp" 
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_marginBottom="12dp" />
+                
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:progressTint="@color/color_primary"
+                    android:layout_marginBottom="8dp" />
+                
+                <TextView
+                    android:id="@+id/tv_processing_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Analyzing your business problem..."
+                    android:textColor="@color/color_text_tertiary"
+                    android:textSize="13sp"
+                    android:fontFamily="sans-serif"
+                    android:layout_marginBottom="16dp" />
+                
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_pipeline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

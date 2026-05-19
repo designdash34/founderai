@@ -1,0 +1,699 @@
+[
+  {
+    "timestamp": "2026-05-19T16:44:08.829936",
+    "layer": "API_ROUTE",
+    "type": "TASK_COMPLETE",
+    "agent": "DashboardService",
+    "data": {
+      "message": "System reset completed successfully."
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:44:09.146987",
+    "layer": "API_ROUTE",
+    "type": "TASK_START",
+    "agent": "TraceService",
+    "data": {
+      "message": "Fetching all traces"
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:44:09.751229",
+    "layer": "API_ROUTE",
+    "type": "TASK_COMPLETE",
+    "agent": "TraceService",
+    "data": {
+      "message": "Successfully retrieved 2 trace steps."
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:44:10.127401",
+    "layer": "API_ROUTE",
+    "type": "TASK_START",
+    "agent": "DashboardService",
+    "data": {
+      "message": "Fetching dashboard metrics"
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:44:11.184191",
+    "layer": "API_ROUTE",
+    "type": "TASK_COMPLETE",
+    "agent": "DashboardService",
+    "data": {
+      "message": "Dashboard metrics loaded successfully.",
+      "runs": 0,
+      "insights": 0
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:44:11.509877",
+    "layer": "API_ROUTE",
+    "type": "TASK_START",
+    "agent": "DashboardService",
+    "data": {
+      "message": "Fetching dashboard metrics"
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:44:12.514997",
+    "layer": "API_ROUTE",
+    "type": "TASK_COMPLETE",
+    "agent": "DashboardService",
+    "data": {
+      "message": "Dashboard metrics loaded successfully.",
+      "runs": 0,
+      "insights": 0
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:44:12.821180",
+    "layer": "API_ROUTE",
+    "type": "TASK_START",
+    "agent": "TraceService",
+    "data": {
+      "message": "Fetching all traces"
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:44:13.414539",
+    "layer": "API_ROUTE",
+    "type": "TASK_COMPLETE",
+    "agent": "TraceService",
+    "data": {
+      "message": "Successfully retrieved 8 trace steps."
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:44:13.742445",
+    "layer": "API_ROUTE",
+    "type": "TASK_START",
+    "agent": "DashboardService",
+    "data": {
+      "message": "Fetching dashboard metrics"
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:44:14.664845",
+    "layer": "API_ROUTE",
+    "type": "TASK_COMPLETE",
+    "agent": "DashboardService",
+    "data": {
+      "message": "Dashboard metrics loaded successfully.",
+      "runs": 0,
+      "insights": 0
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:44:14.971177",
+    "layer": "API_ROUTE",
+    "type": "TASK_START",
+    "agent": "InsightsService",
+    "data": {
+      "message": "Fetching insights for session: GLOBAL",
+      "session_id": "GLOBAL"
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:44:15.277734",
+    "layer": "API_ROUTE",
+    "type": "INFO",
+    "agent": "InsightsService",
+    "data": {
+      "message": "No analysis results found. Run an analysis first to generate insights."
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:44:15.606526",
+    "layer": "API_ROUTE",
+    "type": "TASK_COMPLETE",
+    "agent": "InsightsService",
+    "data": {
+      "message": "Successfully retrieved 0 insights for session: GLOBAL",
+      "session_id": "GLOBAL"
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:46:08.209239",
+    "layer": "API_ROUTE",
+    "type": "TASK_START",
+    "agent": "DashboardService",
+    "data": {
+      "message": "Fetching dashboard metrics"
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:46:09.760984",
+    "layer": "API_ROUTE",
+    "type": "TASK_COMPLETE",
+    "agent": "DashboardService",
+    "data": {
+      "message": "Dashboard metrics loaded successfully.",
+      "runs": 0,
+      "insights": 0
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:46:11.340770",
+    "layer": "API_ROUTE",
+    "type": "TASK_START",
+    "agent": "DashboardService",
+    "data": {
+      "message": "Fetching dashboard metrics"
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:46:12.319242",
+    "layer": "API_ROUTE",
+    "type": "TASK_COMPLETE",
+    "agent": "DashboardService",
+    "data": {
+      "message": "Dashboard metrics loaded successfully.",
+      "runs": 0,
+      "insights": 0
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:49:39.359098",
+    "layer": "API_ROUTE",
+    "type": "TASK_START",
+    "agent": "UploadSystem",
+    "data": {
+      "message": "Uploading: sandal_beauty_cream_report.pdf"
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:49:40.730798",
+    "layer": "API_ROUTE",
+    "type": "TASK_COMPLETE",
+    "agent": "UploadSystem",
+    "data": {
+      "message": "Uploaded successfully: sandal_beauty_cream_report.pdf",
+      "file_id": "83351127-A18C-4855-97C7-2529676D64D3"
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:49:41.096991",
+    "layer": "API_ROUTE",
+    "type": "TASK_START",
+    "agent": "UploadSystem",
+    "data": {
+      "message": "Uploading: sandal_beauty_cream_sales_data.csv"
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:49:41.505721",
+    "layer": "API_ROUTE",
+    "type": "TASK_COMPLETE",
+    "agent": "UploadSystem",
+    "data": {
+      "message": "Uploaded successfully: sandal_beauty_cream_sales_data.csv",
+      "file_id": "D9A3A3A0-82CA-4A10-99D1-7B45FE692950"
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:49:41.884474",
+    "layer": "INPUT_ORCHESTRATOR",
+    "type": "TASK_START",
+    "agent": "Orchestrator",
+    "data": {
+      "session_id": "7D853481-6C43-4873-A7B2-7097EC5C369C",
+      "scenario": "saas_churn",
+      "scenario_loaded": true
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:49:42.380382",
+    "layer": "ORCHESTRATOR",
+    "type": "WORKPLAN_START",
+    "agent": "FounderLens_System",
+    "data": {
+      "mission": "Consolidated OpenAI GPT-4o-mini Execution",
+      "agents": [
+        "intake",
+        "insight",
+        "conflict",
+        "planner",
+        "simulation",
+        "recovery"
+      ],
+      "platform": "Google Cloud AI",
+      "inputs": {
+        "data_sources": "{'document': {'type': 'document', 'source': 'user_uploaded', 'title': 'SANDAL BEAUTY CREAM', 'date':...",
+        "session_id": "7D853481-6C43-4873-A7B2-7097EC5C369C"
+      }
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:50:06.249643",
+    "layer": "TASK",
+    "type": "COMPLETE",
+    "agent": "Parse, validate, cle",
+    "data": {
+      "output": "{\n  \"parsed_sources\": [\n    {\n      \"source_id\": \"user_uploaded\",\n      \"source_type\": \"document\",\n      \"source_name\": \"SANDAL BEAUTY CREAM\",\n      \"timestamp\": \"2026-05-19T00:00:00Z\",\n      \"credibi"
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:50:24.726669",
+    "layer": "TASK",
+    "type": "COMPLETE",
+    "agent": "Analyze the fully pa",
+    "data": {
+      "output": "{\n  \"trends\": [\n    {\n      \"title\": \"Decline in Unit Sales\",\n      \"description\": \"A significant decline of 34.8% in unit sales from December 2025 (5,600 units) to March 2026 (3,650 units) indicates "
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:50:27.301570",
+    "layer": "TASK",
+    "type": "COMPLETE",
+    "agent": "Analyze the normaliz",
+    "data": {
+      "output": "{\n  \"contradictions\": [],\n  \"data_reliability_score\": 100,\n  \"source_ranking\": [\n    {\n      \"source_id\": \"user_uploaded\",\n      \"reliability_score\": 100,\n      \"reason\": \"Source is a user-uploaded do"
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:50:47.901782",
+    "layer": "TASK",
+    "type": "COMPLETE",
+    "agent": "Using the outputs fr",
+    "data": {
+      "output": "{\n  \"action_chain\": [\n    {\n      \"step\": 1,\n      \"action\": \"Conduct a comprehensive product quality assessment to identify and rectify issues leading to increased return rates and customer complaint"
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:51:12.625133",
+    "layer": "TASK",
+    "type": "COMPLETE",
+    "agent": "Execute a structured",
+    "data": {
+      "output": "{\n  \"before_state\": {\n    \"metrics\": {\n      \"return_rate\": 6.8,\n      \"customer_complaints\": 150,\n      \"customer_feedback_response_rate\": 0,\n      \"churn_rate\": 18.7,\n      \"customer_satisfaction_sc"
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:52:27.344440",
+    "layer": "TASK",
+    "type": "COMPLETE",
+    "agent": "Review the outputs f",
+    "data": {
+      "output": "{\n  \"final_status\": \"success\",\n  \"recovered_data\": {\n    \"intake\": {\n      \"parsed_sources\": [\n        {\n          \"source_id\": \"user_uploaded\",\n          \"source_type\": \"document\",\n          \"source_"
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:52:28.120112",
+    "layer": "ORCHESTRATOR",
+    "type": "EXECUTION_COMPLETE",
+    "agent": "FounderLens_System",
+    "data": {
+      "status": "Success",
+      "summary": "Hybrid chain completed successfully.",
+      "raw_result_preview": "{\n  \"final_status\": \"success\",\n  \"recovered_data\": {\n    \"intake\": {\n      \"parsed_sources\": [\n        {\n          \"source_id\": \"user_uploaded\",\n          \"source_type\": \"document\",\n          \"source_name\": \"SANDAL BEAUTY CREAM\",\n          \"timestamp\": \"2026-05-19T00:00:00Z\",\n          \"credibility_score\": 100,\n          \"confidence_score\": 100,\n          \"status\": \"valid\",\n          \"extracted_entities\": [\n            {\n              \"entity_type\": \"product\",\n              \"entity_name\": \"Sanda..."
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:52:29.364882",
+    "layer": "API",
+    "type": "SUCCESS",
+    "agent": "WebhookService",
+    "data": {
+      "message": "Successfully triggered outbound Discord webhook for session 7D853481-6C43-4873-A7B2-7097EC5C369C."
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:52:31.818258",
+    "layer": "API_ROUTE",
+    "type": "TASK_START",
+    "agent": "InsightsService",
+    "data": {
+      "message": "Fetching insights for session: GLOBAL",
+      "session_id": "GLOBAL"
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:52:32.132136",
+    "layer": "API_ROUTE",
+    "type": "TASK_COMPLETE",
+    "agent": "InsightsService",
+    "data": {
+      "message": "Successfully retrieved 13 insights for session: GLOBAL",
+      "session_id": "GLOBAL"
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:53:33.875504",
+    "layer": "API_ROUTE",
+    "type": "TASK_START",
+    "agent": "InsightsService",
+    "data": {
+      "message": "Fetching insights for session: GLOBAL",
+      "session_id": "GLOBAL"
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:53:34.543634",
+    "layer": "API_ROUTE",
+    "type": "TASK_COMPLETE",
+    "agent": "InsightsService",
+    "data": {
+      "message": "Successfully retrieved 13 insights for session: GLOBAL",
+      "session_id": "GLOBAL"
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:55:07.741447",
+    "layer": "API_ROUTE",
+    "type": "TASK_START",
+    "agent": "SimulationEngine",
+    "data": {
+      "message": "Kicking off dynamic strategic simulation model: marketing_strategy",
+      "investment": 900.0,
+      "target_growth": 10.0,
+      "horizon": 2
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:55:09.139359",
+    "layer": "API_ROUTE",
+    "type": "TASK_COMPLETE",
+    "agent": "SimulationEngine",
+    "data": {
+      "message": "Strategic simulation projection model finished successfully.",
+      "roi": "145%",
+      "impact": "+$1,305"
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:55:47.296146",
+    "layer": "API_ROUTE",
+    "type": "TASK_START",
+    "agent": "SimulationEngine",
+    "data": {
+      "message": "Kicking off dynamic strategic simulation model: pricing_change",
+      "investment": 500.0,
+      "target_growth": 5.0,
+      "horizon": 2
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:55:48.124549",
+    "layer": "API_ROUTE",
+    "type": "TASK_COMPLETE",
+    "agent": "SimulationEngine",
+    "data": {
+      "message": "Strategic simulation projection model finished successfully.",
+      "roi": "100%",
+      "impact": "+$500"
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:56:09.097147",
+    "layer": "API_ROUTE",
+    "type": "TASK_START",
+    "agent": "SimulationEngine",
+    "data": {
+      "message": "Kicking off dynamic strategic simulation model: growth_plan",
+      "investment": 500.0,
+      "target_growth": 5.0,
+      "horizon": 2
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:56:09.846857",
+    "layer": "API_ROUTE",
+    "type": "TASK_COMPLETE",
+    "agent": "SimulationEngine",
+    "data": {
+      "message": "Strategic simulation projection model finished successfully.",
+      "roi": "159%",
+      "impact": "+$795"
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:56:27.154443",
+    "layer": "API_ROUTE",
+    "type": "TASK_START",
+    "agent": "TraceService",
+    "data": {
+      "message": "Fetching all traces"
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:56:27.884387",
+    "layer": "API_ROUTE",
+    "type": "TASK_COMPLETE",
+    "agent": "TraceService",
+    "data": {
+      "message": "Successfully retrieved 43 trace steps."
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:56:30.087472",
+    "layer": "API_ROUTE",
+    "type": "TASK_START",
+    "agent": "TraceService",
+    "data": {
+      "message": "Fetching all traces"
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:56:30.741903",
+    "layer": "API_ROUTE",
+    "type": "TASK_COMPLETE",
+    "agent": "TraceService",
+    "data": {
+      "message": "Successfully retrieved 45 trace steps."
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:56:33.046363",
+    "layer": "API_ROUTE",
+    "type": "TASK_START",
+    "agent": "TraceService",
+    "data": {
+      "message": "Fetching all traces"
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:56:33.632996",
+    "layer": "API_ROUTE",
+    "type": "TASK_COMPLETE",
+    "agent": "TraceService",
+    "data": {
+      "message": "Successfully retrieved 47 trace steps."
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:56:36.095271",
+    "layer": "API_ROUTE",
+    "type": "TASK_START",
+    "agent": "TraceService",
+    "data": {
+      "message": "Fetching all traces"
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:56:36.732820",
+    "layer": "API_ROUTE",
+    "type": "TASK_COMPLETE",
+    "agent": "TraceService",
+    "data": {
+      "message": "Successfully retrieved 49 trace steps."
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:56:39.146372",
+    "layer": "API_ROUTE",
+    "type": "TASK_START",
+    "agent": "TraceService",
+    "data": {
+      "message": "Fetching all traces"
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:56:39.832420",
+    "layer": "API_ROUTE",
+    "type": "TASK_COMPLETE",
+    "agent": "TraceService",
+    "data": {
+      "message": "Successfully retrieved 51 trace steps."
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:56:42.150483",
+    "layer": "API_ROUTE",
+    "type": "TASK_START",
+    "agent": "TraceService",
+    "data": {
+      "message": "Fetching all traces"
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:56:42.830752",
+    "layer": "API_ROUTE",
+    "type": "TASK_COMPLETE",
+    "agent": "TraceService",
+    "data": {
+      "message": "Successfully retrieved 53 trace steps."
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:56:45.149467",
+    "layer": "API_ROUTE",
+    "type": "TASK_START",
+    "agent": "TraceService",
+    "data": {
+      "message": "Fetching all traces"
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:56:45.795913",
+    "layer": "API_ROUTE",
+    "type": "TASK_COMPLETE",
+    "agent": "TraceService",
+    "data": {
+      "message": "Successfully retrieved 55 trace steps."
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:56:48.216509",
+    "layer": "API_ROUTE",
+    "type": "TASK_START",
+    "agent": "TraceService",
+    "data": {
+      "message": "Fetching all traces"
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:56:48.803612",
+    "layer": "API_ROUTE",
+    "type": "TASK_COMPLETE",
+    "agent": "TraceService",
+    "data": {
+      "message": "Successfully retrieved 57 trace steps."
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:56:51.219352",
+    "layer": "API_ROUTE",
+    "type": "TASK_START",
+    "agent": "TraceService",
+    "data": {
+      "message": "Fetching all traces"
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:56:52.041528",
+    "layer": "API_ROUTE",
+    "type": "TASK_COMPLETE",
+    "agent": "TraceService",
+    "data": {
+      "message": "Successfully retrieved 59 trace steps."
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:56:54.241477",
+    "layer": "API_ROUTE",
+    "type": "TASK_START",
+    "agent": "TraceService",
+    "data": {
+      "message": "Fetching all traces"
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:56:54.909807",
+    "layer": "API_ROUTE",
+    "type": "TASK_COMPLETE",
+    "agent": "TraceService",
+    "data": {
+      "message": "Successfully retrieved 61 trace steps."
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:56:56.904652",
+    "layer": "API_ROUTE",
+    "type": "TASK_START",
+    "agent": "InsightsService",
+    "data": {
+      "message": "Fetching insights for session: GLOBAL",
+      "session_id": "GLOBAL"
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:56:57.249566",
+    "layer": "API_ROUTE",
+    "type": "TASK_COMPLETE",
+    "agent": "InsightsService",
+    "data": {
+      "message": "Successfully retrieved 3 insights for session: GLOBAL",
+      "session_id": "GLOBAL"
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:57:08.234143",
+    "layer": "API_ROUTE",
+    "type": "TASK_START",
+    "agent": "UploadSystem",
+    "data": {
+      "message": "Uploading: sandal_beauty_cream_report.pdf"
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:57:08.853562",
+    "layer": "API_ROUTE",
+    "type": "TASK_COMPLETE",
+    "agent": "UploadSystem",
+    "data": {
+      "message": "Uploaded successfully: sandal_beauty_cream_report.pdf",
+      "file_id": "4B357811-39FC-4F41-B9F2-D27129A5472A"
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:57:09.196327",
+    "layer": "API_ROUTE",
+    "type": "TASK_START",
+    "agent": "UploadSystem",
+    "data": {
+      "message": "Uploading: sandal_beauty_cream_sales_data.csv"
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:57:09.639908",
+    "layer": "API_ROUTE",
+    "type": "TASK_COMPLETE",
+    "agent": "UploadSystem",
+    "data": {
+      "message": "Uploaded successfully: sandal_beauty_cream_sales_data.csv",
+      "file_id": "3F27D5F5-9140-4DC5-B872-FA1008302F00"
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:57:10.099017",
+    "layer": "INPUT_ORCHESTRATOR",
+    "type": "TASK_START",
+    "agent": "Orchestrator",
+    "data": {
+      "session_id": "BFEDE8CA-56B6-4689-BB7F-C06E477DA6CC",
+      "scenario": "saas_churn",
+      "scenario_loaded": true
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:57:43.159036",
+    "layer": "API_ROUTE",
+    "type": "TASK_START",
+    "agent": "InsightsService",
+    "data": {
+      "message": "Fetching insights for session: GLOBAL",
+      "session_id": "GLOBAL"
+    }
+  },
+  {
+    "timestamp": "2026-05-19T16:57:43.451694",
+    "layer": "API_ROUTE",
+    "type": "TASK_COMPLETE",
+    "agent": "InsightsService",
+    "data": {
+      "message": "Successfully retrieved 10 insights for session: GLOBAL",
+      "session_id": "GLOBAL"
+    }
+  }
+]

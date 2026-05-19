@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Spacing -->
+    <dimen name="spacing_4">4dp</dimen>
+    <dimen name="spacing_8">8dp</dimen>
+    <dimen name="spacing_12">12dp</dimen>
+    <dimen name="spacing_16">16dp</dimen>
+    <dimen name="spacing_20">20dp</dimen>
+    <dimen name="spacing_24">24dp</dimen>
+    <dimen name="spacing_32">32dp</dimen>
+    <dimen name="spacing_40">40dp</dimen>
+    <dimen name="spacing_48">48dp</dimen>
+    <dimen name="spacing_64">64dp</dimen>
+
+    <!-- Screen Padding -->
+    <dimen name="screen_padding">20dp</dimen>
+    <dimen name="card_padding">16dp</dimen>
+    <dimen name="item_padding">12dp</dimen>
+
+    <!-- Corner Radius -->
+    <dimen name="radius_small">8dp</dimen>
+    <dimen name="radius_medium">12dp</dimen>
+    <dimen name="radius_large">16dp</dimen>
+    <dimen name="radius_xl">24dp</dimen>
+    <dimen name="radius_pill">50dp</dimen>
+
+    <!-- Icon Sizes -->
+    <dimen name="icon_small">16dp</dimen>
+    <dimen name="icon_medium">24dp</dimen>
+    <dimen name="icon_large">32dp</dimen>
+    <dimen name="icon_xl">48dp</dimen>
+
+    <!-- Avatar / Agent Icon -->
+    <dimen name="agent_icon_size">48dp</dimen>
+    <dimen name="agent_dot_size">8dp</dimen>
+
+    <!-- Chart Heights -->
+    <dimen name="chart_height_small">160dp</dimen>
+    <dimen name="chart_height_medium">220dp</dimen>
+    <dimen name="chart_height_large">280dp</dimen>
+
+    <!-- Toolbar Height -->
+    <dimen name="toolbar_height">56dp</dimen>
+    <dimen name="bottom_nav_height">64dp</dimen>
+
+    <!-- Stroke Widths -->
+    <dimen name="stroke_thin">0.5dp</dimen>
+    <dimen name="stroke_normal">1dp</dimen>
+    <dimen name="stroke_thick">2dp</dimen>
+
+    <!-- Splash Logo -->
+    <dimen name="splash_logo_size">160dp</dimen>
+
+    <!-- Onboarding -->
+    <dimen name="onboarding_illustration_height">280dp</dimen>
+
+    <!-- KPI Card -->
+    <dimen name="kpi_card_height">100dp</dimen>
+
+    <!-- Text Sizes -->
+    <dimen name="text_h1">36sp</dimen>
+    <dimen name="text_h2">24sp</dimen>
+    <dimen name="text_h3">20sp</dimen>
+    <dimen name="text_body_large">16sp</dimen>
+    <dimen name="text_body">15sp</dimen>
+    <dimen name="text_body_small">14sp</dimen>
+    <dimen name="text_label">12sp</dimen>
+    <dimen name="text_kpi">28sp</dimen>
+</resources>

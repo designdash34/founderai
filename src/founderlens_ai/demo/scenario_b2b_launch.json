@@ -1,0 +1,12 @@
+{
+  "scenario_id": "SCENARIO_B2B_LAUNCH_003",
+  "scenario_name": "B2B Market Entry",
+  "startup_name": "InboundScale",
+  "problem_statement": "Launching a new B2B product and need to identify high-intent market segments.",
+  "inputs": {
+    "document": { "title": "B2B Market Strategy", "quality_score": 85 },
+    "structured": { "row_count": 500, "quality_score": 80 },
+    "web_intel": { "title": "Competitor Analysis Q2", "quality_score": 80 },
+    "dashboard": { "kpis": [{"name": "pipeline_value", "value": 500000.0}], "quality_score": 85 }
+  }
+}

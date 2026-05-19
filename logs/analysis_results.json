@@ -1,0 +1,466 @@
+[
+  {
+    "session_id": "7D853481-6C43-4873-A7B2-7097EC5C369C",
+    "startup_name": "Startup",
+    "insights": [
+      {
+        "id": "df7e9238-8849-450a-b40c-55d2ceeb1d81",
+        "type": "trend",
+        "title": "Decline in Unit Sales",
+        "description": "A significant decline of 34.8% in unit sales from December 2025 (5,600 units) to March 2026 (3,650 units) indicates a troubling trend in customer demand.",
+        "confidence": 95,
+        "impact": "critical",
+        "agent": "InsightAgent",
+        "timestamp": "2026-05-19T11:52:28.418580+00:00",
+        "tags": [
+          "Courtroom",
+          "Trend"
+        ]
+      },
+      {
+        "id": "7bf378ed-29a3-4343-a563-0a92f797393d",
+        "type": "trend",
+        "title": "Increasing Customer Churn",
+        "description": "Customer churn rate has increased from 8.2% in October 2025 to 18.7% in March 2026, suggesting growing dissatisfaction among customers.",
+        "confidence": 90,
+        "impact": "high",
+        "agent": "InsightAgent",
+        "timestamp": "2026-05-19T11:52:28.418626+00:00",
+        "tags": [
+          "Courtroom",
+          "Trend"
+        ]
+      },
+      {
+        "id": "c6a79f97-e4f7-4ad2-8e51-3961c792f00a",
+        "type": "trend",
+        "title": "Deteriorating Customer Satisfaction",
+        "description": "Average ratings have dropped from 4.5 in October 2025 to 3.5 in March 2026, reflecting a decline in customer satisfaction.",
+        "confidence": 85,
+        "impact": "high",
+        "agent": "InsightAgent",
+        "timestamp": "2026-05-19T11:52:28.418659+00:00",
+        "tags": [
+          "Courtroom",
+          "Trend"
+        ]
+      },
+      {
+        "id": "3942f50f-d82f-4dde-98b6-7ef322581b11",
+        "type": "risk",
+        "title": "Rising Return Rate",
+        "description": "The return rate has increased from 4.2% in December 2025 to 6.8% in March 2026, indicating potential quality issues or misalignment with customer expectations.",
+        "confidence": 80,
+        "impact": "high",
+        "agent": "InsightAgent",
+        "timestamp": "2026-05-19T11:52:28.418691+00:00",
+        "tags": [
+          "Courtroom",
+          "Risk"
+        ]
+      },
+      {
+        "id": "1f828c23-bd22-4798-9f35-4c9b0ceac483",
+        "type": "risk",
+        "title": "Escalating Complaints",
+        "description": "Monthly complaints have surged from 38 in October 2025 to 134 in March 2026, highlighting a critical risk to brand reputation and customer retention.",
+        "confidence": 85,
+        "impact": "high",
+        "agent": "InsightAgent",
+        "timestamp": "2026-05-19T11:52:28.418723+00:00",
+        "tags": [
+          "Courtroom",
+          "Risk"
+        ]
+      },
+      {
+        "id": "48140b65-dca1-49a0-89f1-052232dacb49",
+        "type": "opportunity",
+        "title": "Product Quality Improvement",
+        "description": "Addressing the rising return rate and customer complaints presents an opportunity for product quality enhancements, which could help regain customer trust and satisfaction.",
+        "confidence": 75,
+        "impact": "high",
+        "agent": "InsightAgent",
+        "timestamp": "2026-05-19T11:52:28.418755+00:00",
+        "tags": [
+          "Courtroom",
+          "Opportunity"
+        ]
+      },
+      {
+        "id": "67dc43a8-983e-4503-a6c2-9c77d34e74fe",
+        "type": "opportunity",
+        "title": "Customer Retention Strategies",
+        "description": "Implementing targeted customer retention strategies could mitigate the increasing churn rate and improve overall customer loyalty.",
+        "confidence": 70,
+        "impact": "medium",
+        "agent": "InsightAgent",
+        "timestamp": "2026-05-19T11:52:28.418794+00:00",
+        "tags": [
+          "Courtroom",
+          "Opportunity"
+        ]
+      },
+      {
+        "id": "f6be4660-3fac-480a-b01d-9207b9995e4b",
+        "type": "trend",
+        "title": "Sudden Spike in Complaints",
+        "description": "There is a notable spike in complaints from 78 in January 2026 to 134 in March 2026, indicating a significant issue that requires immediate attention.",
+        "confidence": 90,
+        "impact": "high",
+        "agent": "InsightAgent",
+        "timestamp": "2026-05-19T11:52:28.418822+00:00",
+        "tags": [
+          "Courtroom",
+          "Anomaly"
+        ]
+      }
+    ],
+    "contradictions": [],
+    "action_chain": [
+      {
+        "step": 1,
+        "action": "Conduct a comprehensive product quality assessment to identify and rectify issues leading to increased return rates and customer complaints.",
+        "target_metric": "Reduce return rate from 6.8% to below 5% within 3 months.",
+        "expected_impact": "Improved product quality and reduced customer complaints.",
+        "priority": "HIGH"
+      },
+      {
+        "step": 2,
+        "action": "Launch a customer feedback initiative to gather insights on dissatisfaction causes and improve product offerings based on direct customer input.",
+        "target_metric": "Achieve a 20% response rate from customers within 1 month.",
+        "expected_impact": "Enhanced understanding of customer needs and preferences.",
+        "priority": "HIGH"
+      },
+      {
+        "step": 3,
+        "action": "Develop and implement targeted customer retention strategies, including personalized communication and loyalty programs, to reduce churn rates.",
+        "target_metric": "Decrease churn rate from 18.7% to below 15% within 6 months.",
+        "expected_impact": "Increased customer loyalty and reduced churn.",
+        "priority": "MED"
+      },
+      {
+        "step": 4,
+        "action": "Monitor and analyze the effectiveness of implemented strategies through KPIs such as churn rate, return rate, and customer satisfaction scores.",
+        "target_metric": "Establish baseline KPIs and track improvements monthly.",
+        "expected_impact": "Data-driven insights for continuous improvement.",
+        "priority": "MED"
+      },
+      {
+        "step": 5,
+        "action": "Create a communication plan to inform customers about improvements made and encourage feedback for continuous enhancement.",
+        "target_metric": "Reach 70% of customers with the communication plan within 2 months.",
+        "expected_impact": "Increased customer engagement and trust.",
+        "priority": "LOW"
+      }
+    ],
+    "simulation_result": {
+      "before_state": {
+        "metrics": {
+          "return_rate": 6.8,
+          "customer_complaints": 150,
+          "customer_feedback_response_rate": 0,
+          "churn_rate": 18.7,
+          "customer_satisfaction_score": 75,
+          "customer_engagement_rate": 0
+        }
+      },
+      "execution_log": [
+        {
+          "step": 1,
+          "action": "Conduct a comprehensive product quality assessment to identify and rectify issues leading to increased return rates and customer complaints.",
+          "result": "Identified key quality issues and implemented corrective measures.",
+          "kpi_changes": {
+            "return_rate": "Reduced from 6.8% to 6.0% after quality improvements.",
+            "customer_complaints": "Decreased from 150 to 120 due to improved product quality."
+          },
+          "status": "success"
+        },
+        {
+          "step": 2,
+          "action": "Launch a customer feedback initiative to gather insights on dissatisfaction causes and improve product offerings based on direct customer input.",
+          "result": "Initiated feedback collection with targeted outreach.",
+          "kpi_changes": {
+            "customer_feedback_response_rate": "Achieved a 20% response rate from customers."
+          },
+          "status": "success"
+        },
+        {
+          "step": 3,
+          "action": "Develop and implement targeted customer retention strategies, including personalized communication and loyalty programs, to reduce churn rates.",
+          "result": "Launched retention strategies with initial customer engagement.",
+          "kpi_changes": {
+            "churn_rate": "Reduced from 18.7% to 17.5% as a result of targeted strategies."
+          },
+          "status": "success"
+        },
+        {
+          "step": 4,
+          "action": "Monitor and analyze the effectiveness of implemented strategies through KPIs such as churn rate, return rate, and customer satisfaction scores.",
+          "result": "Established baseline KPIs and initiated monthly tracking.",
+          "kpi_changes": {
+            "customer_satisfaction_score": "Increased from 75 to 78 due to improved product quality and retention efforts."
+          },
+          "status": "success"
+        },
+        {
+          "step": 5,
+          "action": "Create a communication plan to inform customers about improvements made and encourage feedback for continuous enhancement.",
+          "result": "Developed and launched a communication plan.",
+          "kpi_changes": {
+            "customer_engagement_rate": "Reached 70% of customers with the communication plan."
+          },
+          "status": "success"
+        }
+      ],
+      "intermediate_states": [
+        {
+          "step": 1,
+          "state": {
+            "metrics": {
+              "return_rate": 6.0,
+              "customer_complaints": 120,
+              "customer_feedback_response_rate": 0,
+              "churn_rate": 18.7,
+              "customer_satisfaction_score": 75,
+              "customer_engagement_rate": 0
+            }
+          }
+        },
+        {
+          "step": 2,
+          "state": {
+            "metrics": {
+              "return_rate": 6.0,
+              "customer_complaints": 120,
+              "customer_feedback_response_rate": 20,
+              "churn_rate": 18.7,
+              "customer_satisfaction_score": 75,
+              "customer_engagement_rate": 0
+            }
+          }
+        },
+        {
+          "step": 3,
+          "state": {
+            "metrics": {
+              "return_rate": 6.0,
+              "customer_complaints": 120,
+              "customer_feedback_response_rate": 20,
+              "churn_rate": 17.5,
+              "customer_satisfaction_score": 75,
+              "customer_engagement_rate": 0
+            }
+          }
+        },
+        {
+          "step": 4,
+          "state": {
+            "metrics": {
+              "return_rate": 6.0,
+              "customer_complaints": 120,
+              "customer_feedback_response_rate": 20,
+              "churn_rate": 17.5,
+              "customer_satisfaction_score": 78,
+              "customer_engagement_rate": 0
+            }
+          }
+        },
+        {
+          "step": 5,
+          "state": {
+            "metrics": {
+              "return_rate": 6.0,
+              "customer_complaints": 120,
+              "customer_feedback_response_rate": 20,
+              "churn_rate": 17.5,
+              "customer_satisfaction_score": 78,
+              "customer_engagement_rate": 70
+            }
+          }
+        }
+      ],
+      "after_state": {
+        "metrics": {
+          "return_rate": 6.0,
+          "customer_complaints": 120,
+          "customer_feedback_response_rate": 20,
+          "churn_rate": 17.5,
+          "customer_satisfaction_score": 78,
+          "customer_engagement_rate": 70
+        }
+      },
+      "improvement_summary": "Successfully reduced return rate and churn rate while increasing customer satisfaction and engagement through targeted actions.",
+      "side_effects": [
+        {
+          "effect": "Increased operational workload due to quality assessment and feedback initiatives.",
+          "impact": "negative"
+        }
+      ],
+      "confidence": "HIGH"
+    },
+    "raw_result": "{\n  \"final_status\": \"success\",\n  \"recovered_data\": {\n    \"intake\": {\n      \"parsed_sources\": [\n        {\n          \"source_id\": \"user_uploaded\",\n          \"source_type\": \"document\",\n          \"source_name\": \"SANDAL BEAUTY CREAM\",\n          \"timestamp\": \"2026-05-19T00:00:00Z\",\n          \"credibility_score\": 100,\n          \"confidence_score\": 100,\n          \"status\": \"valid\",\n          \"extracted_entities\": [\n            {\n              \"entity_type\": \"product\",\n              \"entity_name\": \"Sandal Beauty Cream\"\n            },\n            {\n              \"entity_type\": \"location\",\n              \"entity_name\": \"Pakistan\"\n            },\n            {\n              \"entity_type\": \"date\",\n              \"entity_name\": \"December 31, 2025\"\n            },\n            {\n              \"entity_type\": \"date\",\n              \"entity_name\": \"Q1 2026\"\n            },\n            {\n              \"entity_type\": \"company\",\n              \"entity_name\": \"Fragrance & Cosmetics Pvt Ltd\"\n            },\n            {\n              \"entity_type\": \"company\",\n              \"entity_name\": \"Pure Botanics Lab\"\n            }\n          ],\n          \"key_metrics\": {\n            \"monthly_units_sold\": {\n              \"October\": 4200,\n              \"November\": 4850,\n              \"December\": 5600,\n              \"January\": 4900,\n              \"February\": 4100,\n              \"March\": 3650\n            },\n            \"monthly_revenue_pkr\": {\n              \"October\": 2940000,\n              \"November\": 3395000,\n              \"December\": 3920000,\n              \"January\": 3430000,\n              \"February\": 2870000,\n              \"March\": 2560000\n            },\n            \"customer_churn_pct\": {\n              \"October\": 8.2,\n              \"November\": 9.1,\n              \"December\": 10.3,\n              \"January\": 12.8,\n              \"February\": 15.4,\n              \"March\": 18.7\n            },\n            \"return_rate_pct\": {\n              \"October\": 3.1,\n              \"November\": 3.8,\n              \"December\": 4.2,\n              \"January\": 5.1,\n              \"February\": 5.9,\n              \"March\": 6.8\n            },\n            \"avg_rating\": {\n              \"October\": 4.5,\n              \"November\": 4.4,\n              \"December\": 4.3,\n              \"January\": 4.1,\n              \"February\": 3.8,\n              \"March\": 3.5\n            },\n            \"monthly_complaints\": {\n              \"October\": 38,\n              \"November\": 47,\n              \"December\": 59,\n              \"January\": 78,\n              \"February\": 102,\n              \"March\": 134\n            }\n          },\n          \"detected_signals\": [\n            \"34.8% decline in unit sales from December 2025 to March 2026\",\n            \"Customer churn rate increased from 8.2% to 18.7% in 6 months\",\n            \"Return rate increased from 4.2% to 6.8% in 6 months\",\n            \"Significant rise in complaints and negative reviews\"\n          ],\n          \"raw_summary\": \"Sandal Beauty Cream, Pakistan's premium sandalwood-based skincare brand, has experienced strong sales momentum through late 2025 followed by a notable performance decline entering 2026. Unit sales peaked at 5,600 units in December 2025 with revenue of PKR 3,920,000, but have since declined to approximately 3,650 units as of March 2026 \u2014 a 34.8% volume drop. Customer satisfaction scores are deteriorating, complaint volumes are rising sharply, and competitor activity in the sandalwood skincare segment has intensified.\"\n        }\n      ]\n    },\n    \"insight\": {\n      \"trends\": [\n        {\n          \"title\": \"Decline in Unit Sales\",\n          \"description\": \"A significant decline of 34.8% in unit sales from December 2025 (5,600 units) to March 2026 (3,650 units) indicates a troubling trend in customer demand.\",\n          \"evidence\": [\"monthly_units_sold\"],\n          \"impact_level\": \"critical\",\n          \"confidence\": 95\n        },\n        {\n          \"title\": \"Increasing Customer Churn\",\n          \"description\": \"Customer churn rate has increased from 8.2% in October 2025 to 18.7% in March 2026, suggesting growing dissatisfaction among customers.\",\n          \"evidence\": [\"customer_churn_pct\"],\n          \"impact_level\": \"high\",\n          \"confidence\": 90\n        },\n        {\n          \"title\": \"Deteriorating Customer Satisfaction\",\n          \"description\": \"Average ratings have dropped from 4.5 in October 2025 to 3.5 in March 2026, reflecting a decline in customer satisfaction.\",\n          \"evidence\": [\"avg_rating\"],\n          \"impact_level\": \"high\",\n          \"confidence\": 85\n        }\n      ],\n      \"risks\": [\n        {\n          \"title\": \"Rising Return Rate\",\n          \"description\": \"The return rate has increased from 4.2% in December 2025 to 6.8% in March 2026, indicating potential quality issues or misalignment with customer expectations.\",\n          \"evidence\": [\"return_rate_pct\"],\n          \"severity\": 7,\n          \"confidence\": 80\n        },\n        {\n          \"title\": \"Escalating Complaints\",\n          \"description\": \"Monthly complaints have surged from 38 in October 2025 to 134 in March 2026, highlighting a critical risk to brand reputation and customer retention.\",\n          \"evidence\": [\"monthly_complaints\"],\n          \"severity\": 8,\n          \"confidence\": 85\n        }\n      ],\n      \"opportunities\": [\n        {\n          \"title\": \"Product Quality Improvement\",\n          \"description\": \"Addressing the rising return rate and customer complaints presents an opportunity for product quality enhancements, which could help regain customer trust and satisfaction.\",\n          \"evidence\": [\"return_rate_pct\", \"monthly_complaints\"],\n          \"impact_level\": \"high\",\n          \"confidence\": 75\n        },\n        {\n          \"title\": \"Customer Retention Strategies\",\n          \"description\": \"Implementing targeted customer retention strategies could mitigate the increasing churn rate and improve overall customer loyalty.\",\n          \"evidence\": [\"customer_churn_pct\"],\n          \"impact_level\": \"medium\",\n          \"confidence\": 70\n        }\n      ],\n      \"anomalies\": [\n        {\n          \"title\": \"Sudden Spike in Complaints\",\n          \"description\": \"There is a notable spike in complaints from 78 in January 2026 to 134 in March 2026, indicating a significant issue that requires immediate attention.\",\n          \"evidence\": [\"monthly_complaints\"],\n          \"anomaly_type\": \"spike\",\n          \"confidence\": 90\n        }\n      ],\n      \"severity_score\": 8\n    },\n    \"conflict\": {\n      \"contradictions\": [],\n      \"data_reliability_score\": 100,\n      \"source_ranking\": [\n        {\n          \"source_id\": \"user_uploaded\",\n          \"reliability_score\": 100,\n          \"reason\": \"Source is a user-uploaded document with a high credibility score and confidence score, indicating strong reliability.\"\n        }\n      ],\n      \"unresolved_flags\": []\n    },\n    \"planning\": {\n      \"action_chain\": [\n        {\n          \"step\": 1,\n          \"action\": \"Conduct a comprehensive product quality assessment to identify and rectify issues leading to increased return rates and customer complaints.\",\n          \"target_metric\": \"Reduce return rate from 6.8% to below 5% within 3 months.\",\n          \"expected_impact\": \"Improved product quality and reduced customer complaints.\",\n          \"priority\": \"HIGH\"\n        },\n        {\n          \"step\": 2,\n          \"action\": \"Launch a customer feedback initiative to gather insights on dissatisfaction causes and improve product offerings based on direct customer input.\",\n          \"target_metric\": \"Achieve a 20% response rate from customers within 1 month.\",\n          \"expected_impact\": \"Enhanced understanding of customer needs and preferences.\",\n          \"priority\": \"HIGH\"\n        },\n        {\n          \"step\": 3,\n          \"action\": \"Develop and implement targeted customer retention strategies, including personalized communication and loyalty programs, to reduce churn rates.\",\n          \"target_metric\": \"Decrease churn rate from 18.7% to below 15% within 6 months.\",\n          \"expected_impact\": \"Increased customer loyalty and reduced churn.\",\n          \"priority\": \"MED\"\n        },\n        {\n          \"step\": 4,\n          \"action\": \"Monitor and analyze the effectiveness of implemented strategies through KPIs such as churn rate, return rate, and customer satisfaction scores.\",\n          \"target_metric\": \"Establish baseline KPIs and track improvements monthly.\",\n          \"expected_impact\": \"Data-driven insights for continuous improvement.\",\n          \"priority\": \"MED\"\n        },\n        {\n          \"step\": 5,\n          \"action\": \"Create a communication plan to inform customers about improvements made and encourage feedback for continuous enhancement.\",\n          \"target_metric\": \"Reach 70% of customers with the communication plan within 2 months.\",\n          \"expected_impact\": \"Increased customer engagement and trust.\",\n          \"priority\": \"LOW\"\n        }\n      ],\n      \"constraints_considered\": [\n        {\n          \"type\": \"budget\",\n          \"description\": \"All actions are within the available budget of $50,000.\"\n        },\n        {\n          \"type\": \"time\",\n          \"description\": \"All actions can be completed within the available time frame of 60 days.\"\n        },\n        {\n          \"type\": \"urgency\",\n          \"description\": \"Actions prioritize high-impact initiatives to address critical issues urgently.\"\n        }\n      ],\n      \"rationale\": \"The action chain is designed to address critical business issues identified through insights and conflict analysis, focusing on product quality, customer feedback, retention strategies, and effective communication to enhance customer satisfaction and reduce churn.\"\n    },\n    \"simulation\": {\n      \"before_state\": {\n        \"metrics\": {\n          \"return_rate\": 6.8,\n          \"customer_complaints\": 150,\n          \"customer_feedback_response_rate\": 0,\n          \"churn_rate\": 18.7,\n          \"customer_satisfaction_score\": 75,\n          \"customer_engagement_rate\": 0\n        }\n      },\n      \"execution_log\": [\n        {\n          \"step\": 1,\n          \"action\": \"Conduct a comprehensive product quality assessment to identify and rectify issues leading to increased return rates and customer complaints.\",\n          \"result\": \"Identified key quality issues and implemented corrective measures.\",\n          \"kpi_changes\": {\n            \"return_rate\": \"Reduced from 6.8% to 6.0% after quality improvements.\",\n            \"customer_complaints\": \"Decreased from 150 to 120 due to improved product quality.\"\n          },\n          \"status\": \"success\"\n        },\n        {\n          \"step\": 2,\n          \"action\": \"Launch a customer feedback initiative to gather insights on dissatisfaction causes and improve product offerings based on direct customer input.\",\n          \"result\": \"Initiated feedback collection with targeted outreach.\",\n          \"kpi_changes\": {\n            \"customer_feedback_response_rate\": \"Achieved a 20% response rate from customers.\"\n          },\n          \"status\": \"success\"\n        },\n        {\n          \"step\": 3,\n          \"action\": \"Develop and implement targeted customer retention strategies, including personalized communication and loyalty programs, to reduce churn rates.\",\n          \"result\": \"Launched retention strategies with initial customer engagement.\",\n          \"kpi_changes\": {\n            \"churn_rate\": \"Reduced from 18.7% to 17.5% as a result of targeted strategies.\"\n          },\n          \"status\": \"success\"\n        },\n        {\n          \"step\": 4,\n          \"action\": \"Monitor and analyze the effectiveness of implemented strategies through KPIs such as churn rate, return rate, and customer satisfaction scores.\",\n          \"result\": \"Established baseline KPIs and initiated monthly tracking.\",\n          \"kpi_changes\": {\n            \"customer_satisfaction_score\": \"Increased from 75 to 78 due to improved product quality and retention efforts.\"\n          },\n          \"status\": \"success\"\n        },\n        {\n          \"step\": 5,\n          \"action\": \"Create a communication plan to inform customers about improvements made and encourage feedback for continuous enhancement.\",\n          \"result\": \"Developed and launched a communication plan.\",\n          \"kpi_changes\": {\n            \"customer_engagement_rate\": \"Reached 70% of customers with the communication plan.\"\n          },\n          \"status\": \"success\"\n        }\n      ],\n      \"intermediate_states\": [\n        {\n          \"step\": 1,\n          \"state\": {\n            \"metrics\": {\n              \"return_rate\": 6.0,\n              \"customer_complaints\": 120,\n              \"customer_feedback_response_rate\": 0,\n              \"churn_rate\": 18.7,\n              \"customer_satisfaction_score\": 75,\n              \"customer_engagement_rate\": 0\n            }\n          }\n        },\n        {\n          \"step\": 2,\n          \"state\": {\n            \"metrics\": {\n              \"return_rate\": 6.0,\n              \"customer_complaints\": 120,\n              \"customer_feedback_response_rate\": 20,\n              \"churn_rate\": 18.7,\n              \"customer_satisfaction_score\": 75,\n              \"customer_engagement_rate\": 0\n            }\n          }\n        },\n        {\n          \"step\": 3,\n          \"state\": {\n            \"metrics\": {\n              \"return_rate\": 6.0,\n              \"customer_complaints\": 120,\n              \"customer_feedback_response_rate\": 20,\n              \"churn_rate\": 17.5,\n              \"customer_satisfaction_score\": 75,\n              \"customer_engagement_rate\": 0\n            }\n          }\n        },\n        {\n          \"step\": 4,\n          \"state\": {\n            \"metrics\": {\n              \"return_rate\": 6.0,\n              \"customer_complaints\": 120,\n              \"customer_feedback_response_rate\": 20,\n              \"churn_rate\": 17.5,\n              \"customer_satisfaction_score\": 78,\n              \"customer_engagement_rate\": 0\n            }\n          }\n        },\n        {\n          \"step\": 5,\n          \"state\": {\n            \"metrics\": {\n              \"return_rate\": 6.0,\n              \"customer_complaints\": 120,\n              \"customer_feedback_response_rate\": 20,\n              \"churn_rate\": 17.5,\n              \"customer_satisfaction_score\": 78,\n              \"customer_engagement_rate\": 70\n            }\n          }\n        }\n      ],\n      \"after_state\": {\n        \"metrics\": {\n          \"return_rate\": 6.0,\n          \"customer_complaints\": 120,\n          \"customer_feedback_response_rate\": 20,\n          \"churn_rate\": 17.5,\n          \"customer_satisfaction_score\": 78,\n          \"customer_engagement_rate\": 70\n        }\n      },\n      \"improvement_summary\": \"Successfully reduced return rate and churn rate while increasing customer satisfaction and engagement through targeted actions.\",\n      \"side_effects\": [\n        {\n          \"effect\": \"Increased operational workload due to quality assessment and feedback initiatives.\",\n          \"impact\": \"negative\"\n        }\n      ],\n      \"confidence\": \"HIGH\"\n    }\n  },\n  \"issues_detected\": [],\n  \"warnings\": [],\n  \"fallback_actions_taken\": []\n}",
+    "total_runtime_seconds": 166.534,
+    "cost_estimate_usd": 0.05
+  },
+  {
+    "session_id": "SIM_BF73EF0B",
+    "startup_name": "Simulation (Marketing Strategy)",
+    "insights": [
+      "Allocate at least 45% of the $900 investment towards low-friction digital acquisition channels.",
+      "Deploy multivariate testing on checkout pages to capture the projected 145% return on sales.",
+      "Build retention programs to maximize the lifetime value (LTV) of newly acquired customer contacts."
+    ],
+    "contradictions": [],
+    "action_chain": [],
+    "simulation_result": {
+      "scenario_type": "marketing_strategy",
+      "investment_amount": 900.0,
+      "target_growth_rate": 10.0,
+      "time_horizon_months": 2,
+      "roi": "145%",
+      "revenue_impact": "+$1,305"
+    },
+    "raw_result": "Simulation run for scenario 'marketing_strategy' with investment $900 and target growth rate 10.0%.",
+    "total_runtime_seconds": 0.5,
+    "cost_estimate_usd": 0.005
+  },
+  {
+    "session_id": "SIM_1352A3A7",
+    "startup_name": "Simulation (Pricing Change)",
+    "insights": [
+      "Implement utility-based tiered pricing to capture consumer surplus without alienating churn-sensitive accounts.",
+      "Conduct customer price elasticity trials before scaling adjustments globally.",
+      "Grandfather legacy accounts for 6 months to offset immediate attrition risks."
+    ],
+    "contradictions": [],
+    "action_chain": [],
+    "simulation_result": {
+      "scenario_type": "pricing_change",
+      "investment_amount": 500.0,
+      "target_growth_rate": 5.0,
+      "time_horizon_months": 2,
+      "roi": "100%",
+      "revenue_impact": "+$500"
+    },
+    "raw_result": "Simulation run for scenario 'pricing_change' with investment $500 and target growth rate 5.0%.",
+    "total_runtime_seconds": 0.5,
+    "cost_estimate_usd": 0.005
+  },
+  {
+    "session_id": "SIM_2A684C59",
+    "startup_name": "Simulation (Growth Plan)",
+    "insights": [
+      "Onboard strategic customer success advisors to support the aggressive 5.0% growth target.",
+      "Optimize critical service onboarding funnels to prevent early retention leaks.",
+      "Upgrade technical support capacity to sustain expanded daily client interactions."
+    ],
+    "contradictions": [],
+    "action_chain": [],
+    "simulation_result": {
+      "scenario_type": "growth_plan",
+      "investment_amount": 500.0,
+      "target_growth_rate": 5.0,
+      "time_horizon_months": 2,
+      "roi": "159%",
+      "revenue_impact": "+$795"
+    },
+    "raw_result": "Simulation run for scenario 'growth_plan' with investment $500 and target growth rate 5.0%.",
+    "total_runtime_seconds": 0.5,
+    "cost_estimate_usd": 0.005
+  },
+  {
+    "session_id": "BFEDE8CA-56B6-4689-BB7F-C06E477DA6CC",
+    "startup_name": "Startup (Baseline)",
+    "insights": [
+      {
+        "id": "68630446-6943-4431-a92c-5a91707c17fa",
+        "type": "risk",
+        "title": "Sandal Beauty Cream experienced..",
+        "description": "Sandal Beauty Cream experienced a significant decline in sales and customer satisfaction in early 2026, with unit sales dropping by 34.8% from December 2025 to March 2026.",
+        "confidence": 87,
+        "impact": "high",
+        "agent": "DirectLLM",
+        "timestamp": "2026-05-19T11:57:40.379514+00:00",
+        "tags": [
+          "Baseline",
+          "Risk"
+        ]
+      },
+      {
+        "id": "4fe50422-3a17-4746-8c53-d640f198e280",
+        "type": "risk",
+        "title": "Customer churn rate has..",
+        "description": "Customer churn rate has sharply increased from 10.3% in December 2025 to 18.7% in March 2026, indicating a growing dissatisfaction among customers.",
+        "confidence": 86,
+        "impact": "high",
+        "agent": "DirectLLM",
+        "timestamp": "2026-05-19T11:57:40.379601+00:00",
+        "tags": [
+          "Baseline",
+          "Risk"
+        ]
+      },
+      {
+        "id": "40e615ec-58d7-4d95-8f0b-ccfa99941cb2",
+        "type": "risk",
+        "title": "Product quality issues, particularly..",
+        "description": "Product quality issues, particularly related to packaging and formula consistency, are the primary drivers of negative customer feedback, with 58% of complaints citing these issues.",
+        "confidence": 90,
+        "impact": "high",
+        "agent": "DirectLLM",
+        "timestamp": "2026-05-19T11:57:40.379669+00:00",
+        "tags": [
+          "Baseline",
+          "Risk"
+        ]
+      },
+      {
+        "id": "09fb94bd-dc5d-4621-86db-690895eb8f5b",
+        "type": "risk",
+        "title": "The entry of three..",
+        "description": "The entry of three new competitors offering lower-priced alternatives is intensifying market pressure, contributing to the decline in sales and customer retention.",
+        "confidence": 91,
+        "impact": "high",
+        "agent": "DirectLLM",
+        "timestamp": "2026-05-19T11:57:40.379729+00:00",
+        "tags": [
+          "Baseline",
+          "Risk"
+        ]
+      },
+      {
+        "id": "3f4c2406-2a33-4c0e-b075-9abed2b57b93",
+        "type": "risk",
+        "title": "Social media sentiment has..",
+        "description": "Social media sentiment has worsened, with a significant drop in positive reviews and an increase in negative reviews, suggesting a shift in customer perception.",
+        "confidence": 95,
+        "impact": "high",
+        "agent": "DirectLLM",
+        "timestamp": "2026-05-19T11:57:40.379786+00:00",
+        "tags": [
+          "Baseline",
+          "Risk"
+        ]
+      }
+    ],
+    "contradictions": [
+      "Despite the decline in customer satisfaction and sales, the marketing ROI remains high, indicating that marketing efforts are still effective even as product quality issues arise."
+    ],
+    "action_chain": [
+      "Conduct an emergency quality audit to identify the root cause of product quality issues.",
+      "Pause production with the current manufacturer and revert to the previous manufacturer to ensure quality.",
+      "Launch a customer recovery campaign targeting recent purchasers to mitigate negative sentiment.",
+      "Re-engage lost influencer partnerships to improve brand perception and social media presence.",
+      "Introduce a new 30g trial size product to attract price-sensitive customers and compete with new entrants."
+    ],
+    "simulation_result": {
+      "expected_units_sold": 5200,
+      "expected_revenue_pkr": 3640000,
+      "comparison_to_peak": "-7.1%"
+    },
+    "raw_result": "{\"insights\": [\"Sandal Beauty Cream experienced a significant decline in sales and customer satisfaction in early 2026, with unit sales dropping by 34.8% from December 2025 to March 2026.\", \"Customer churn rate has sharply increased from 10.3% in December 2025 to 18.7% in March 2026, indicating a growing dissatisfaction among customers.\", \"Product quality issues, particularly related to packaging and formula consistency, are the primary drivers of negative customer feedback, with 58% of complaints citing these issues.\", \"The entry of three new competitors offering lower-priced alternatives is intensifying market pressure, contributing to the decline in sales and customer retention.\", \"Social media sentiment has worsened, with a significant drop in positive reviews and an increase in negative reviews, suggesting a shift in customer perception.\"], \"contradictions\": [\"Despite the decline in customer satisfaction and sales, the marketing ROI remains high, indicating that marketing efforts are still effective even as product quality issues arise.\"], \"action_chain\": [\"Conduct an emergency quality audit to identify the root cause of product quality issues.\", \"Pause production with the current manufacturer and revert to the previous manufacturer to ensure quality.\", \"Launch a customer recovery campaign targeting recent purchasers to mitigate negative sentiment.\", \"Re-engage lost influencer partnerships to improve brand perception and social media presence.\", \"Introduce a new 30g trial size product to attract price-sensitive customers and compete with new entrants.\"], \"simulation_result\": {\"expected_units_sold\": 5200, \"expected_revenue_pkr\": 3640000, \"comparison_to_peak\": \"-7.1%\"}, \"summary\": \"Immediate corrective actions are necessary to address quality issues and regain customer trust, with a potential for revenue recovery if implemented effectively.\"}",
+    "total_runtime_seconds": 17.18,
+    "cost_estimate_usd": 0.005
+  }
+]

@@ -1,0 +1,98 @@
+   Building founderlens-ai @ file:///home/mouzan/Desktop/founderlens_ai
+Downloading lancedb (44.8MiB)
+Downloading nvidia-cuda-nvrtc (86.0MiB)
+Downloading nvidia-cudnn-cu13 (349.2MiB)
+Downloading nvidia-cusparse (139.2MiB)
+Downloading triton (192.1MiB)
+Downloading nvidia-curand (56.8MiB)
+Downloading nvidia-cusolver (191.6MiB)
+Downloading pyarrow (46.6MiB)
+Downloading nvidia-cufft (204.2MiB)
+Downloading torch (507.6MiB)
+Downloading nvidia-nvshmem-cu13 (57.6MiB)
+Downloading nvidia-cublas (403.5MiB)
+Downloading nvidia-nccl-cu13 (196.4MiB)
+Downloading nvidia-cusparselt-cu13 (162.3MiB)
+      Built founderlens-ai @ file:///home/mouzan/Desktop/founderlens_ai
+ Downloaded lancedb
+ Downloaded pyarrow
+ Downloaded nvidia-curand
+ Downloaded nvidia-nvshmem-cu13
+ Downloaded nvidia-cuda-nvrtc
+ Downloaded nvidia-cusparse
+ Downloaded nvidia-cusparselt-cu13
+ Downloaded nvidia-cusolver
+ Downloaded triton
+ Downloaded nvidia-nccl-cu13
+ Downloaded nvidia-cufft
+ Downloaded nvidia-cudnn-cu13
+ Downloaded nvidia-cublas
+ Downloaded torch
+warning: Failed to hardlink files; falling back to full copy. This may lead to degraded performance.
+         If the cache and target directories are on different filesystems, hardlinking may not be supported.
+         If this is intentional, set `export UV_LINK_MODE=copy` or use `--link-mode=copy` to suppress this warning.
+Installed 214 packages in 1m 35s
+Traceback (most recent call last):
+  File "/home/mouzan/Desktop/founderlens_ai/.venv/bin/uvicorn", line 10, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/home/mouzan/Desktop/founderlens_ai/.venv/lib/python3.13/site-packages/click/core.py", line 1161, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/mouzan/Desktop/founderlens_ai/.venv/lib/python3.13/site-packages/click/core.py", line 1082, in main
+    rv = self.invoke(ctx)
+  File "/home/mouzan/Desktop/founderlens_ai/.venv/lib/python3.13/site-packages/click/core.py", line 1443, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mouzan/Desktop/founderlens_ai/.venv/lib/python3.13/site-packages/click/core.py", line 788, in invoke
+    return __callback(*args, **kwargs)
+  File "/home/mouzan/Desktop/founderlens_ai/.venv/lib/python3.13/site-packages/uvicorn/main.py", line 441, in main
+    run(
+    ~~~^
+        app,
+        ^^^^
+    ...<48 lines>...
+        reset_contextvars=reset_contextvars,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/mouzan/Desktop/founderlens_ai/.venv/lib/python3.13/site-packages/uvicorn/main.py", line 617, in run
+    server.run()
+    ~~~~~~~~~~^^
+  File "/home/mouzan/Desktop/founderlens_ai/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 75, in run
+    return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+  File "/usr/lib/python3.13/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "/usr/lib/python3.13/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+  File "/home/mouzan/Desktop/founderlens_ai/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 79, in serve
+    await self._serve(sockets)
+  File "/home/mouzan/Desktop/founderlens_ai/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 86, in _serve
+    config.load()
+    ~~~~~~~~~~~^^
+  File "/home/mouzan/Desktop/founderlens_ai/.venv/lib/python3.13/site-packages/uvicorn/config.py", line 449, in load
+    self.loaded_app = import_from_string(self.app)
+                      ~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/mouzan/Desktop/founderlens_ai/.venv/lib/python3.13/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+  File "/usr/lib/python3.13/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1395, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/mouzan/Desktop/founderlens_ai/src/founderlens_ai/api/main.py", line 4, in <module>
+    from founderlens_ai.api.routes import (
+    ...<7 lines>...
+    )
+  File "/home/mouzan/Desktop/founderlens_ai/src/founderlens_ai/api/routes/__init__.py", line 12, in <module>
+    from .upload import router as upload_router
+  File "/home/mouzan/Desktop/founderlens_ai/src/founderlens_ai/api/routes/upload.py", line 7, in <module>
+    from founderlens_ai.parsers.pdf_parser import parse_pdf
+ImportError: cannot import name 'parse_pdf' from 'founderlens_ai.parsers.pdf_parser' (/home/mouzan/Desktop/founderlens_ai/src/founderlens_ai/parsers/pdf_parser.py)

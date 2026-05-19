@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    android:background="@color/color_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingHorizontal="32dp"
+        android:paddingTop="48dp">
+
+        <!-- Illustration / Icon Area -->
+        <FrameLayout
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            android:layout_gravity="center_horizontal">
+
+            <!-- Glow Background -->
+            <View
+                android:layout_width="220dp"
+                android:layout_height="220dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_glow_circle"
+                android:alpha="0.8" />
+
+            <!-- Icon -->
+            <ImageView
+                android:id="@+id/iv_illustration"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_gravity="center"
+                android:src="@drawable/logo_main"
+                android:scaleType="fitCenter"
+                android:contentDescription="Onboarding illustration" />
+
+        </FrameLayout>
+
+        <!-- Badge -->
+        <TextView
+            android:id="@+id/tv_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="STEP 1"
+            android:textColor="@color/color_primary"
+            android:textSize="11sp"
+            android:fontFamily="sans-serif-medium"
+            android:background="@drawable/bg_badge"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="5dp"
+            android:letterSpacing="0.1"
+            android:layout_marginTop="24dp" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/onboarding_1_title"
+            android:textColor="@color/color_text_primary"
+            android:textSize="28sp"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:lineSpacingMultiplier="1.2" />
+
+        <!-- Description -->
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/onboarding_1_desc"
+            android:textColor="@color/color_text_secondary"
+            android:textSize="15sp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:lineSpacingMultiplier="1.6" />
+
+        <!-- Feature Pills -->
+        <LinearLayout
+            android:id="@+id/feature_pills"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="32dp">
+
+            <TextView
+                android:id="@+id/pill_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="6 AI Agents"
+                android:textColor="@color/color_secondary"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif-medium"
+                android:background="@drawable/bg_surface"
+                android:paddingHorizontal="14dp"
+                android:paddingVertical="7dp"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/pill_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Autonomous"
+                android:textColor="@color/color_primary"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif-medium"
+                android:background="@drawable/bg_surface"
+                android:paddingHorizontal="14dp"
+                android:paddingVertical="7dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

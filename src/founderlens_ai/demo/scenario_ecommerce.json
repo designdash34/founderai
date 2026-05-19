@@ -1,0 +1,12 @@
+{
+  "scenario_id": "SCENARIO_ECOMMERCE_002",
+  "scenario_name": "E-commerce Scale-up",
+  "startup_name": "ShopSwift",
+  "problem_statement": "Rapid scaling causing inventory stockouts and customer support backlog.",
+  "inputs": {
+    "document": { "title": "Inventory Audit 2026", "quality_score": 80 },
+    "structured": { "row_count": 1000, "quality_score": 85 },
+    "web_intel": { "title": "Global Supply Chain Disruptions", "quality_score": 75 },
+    "dashboard": { "kpis": [{"name": "stock_out_rate", "value": 15.0}], "quality_score": 90 }
+  }
+}

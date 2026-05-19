@@ -1,0 +1,101 @@
+{
+  "scenario_id": "SCENARIO_SAAS_CHURN_001",
+  "scenario_name": "SaaS Churn Crisis",
+  "startup_name": "TechFlow SaaS",
+  "problem_statement": "Startup experiencing critical churn increase over 6 months. Revenue declining. Customer satisfaction deteriorating.",
+  
+  "inputs": {
+    "document": {
+      "type": "document",
+      "source": "preset_demo",
+      "title": "FounderLens AI — SaaS Business Report Q1 2026",
+      "date": "2026-01-15",
+      "full_text": "SaaS startup showing declining retention metrics. Monthly churn increased from 18% to 28% over Q1 2026. MRR dropped from $18,000 to $12,000. Customer complaints increased by 34%. Onboarding completion rate fell to 41%. Competitor pricing pressure identified as key risk.",
+      "key_metrics": {
+        "churn_rate": 28.0,
+        "mrr": 12000,
+        "retention_rate": 41.0,
+        "complaint_increase": 34.0,
+        "onboarding_completion": 41.0
+      },
+      "problems_stated": [
+        "Rising churn rate",
+        "MRR decline",
+        "Poor onboarding completion",
+        "Competitor pricing pressure"
+      ],
+      "quality_score": 85,
+      "warnings": []
+    },
+    "structured": {
+      "type": "structured",
+      "source": "preset_demo",
+      "columns": ["month","mrr","churn_rate","new_users","churned_users","retention","nps_score"],
+      "row_count": 6,
+      "sample_rows": [
+        {"month":"Oct","mrr":18000,"churn_rate":12,"new_users":120,"churned_users":22,"retention":72,"nps_score":54},
+        {"month":"Nov","mrr":16500,"churn_rate":16,"new_users":98,"churned_users":31,"retention":65,"nps_score":48},
+        {"month":"Dec","mrr":15000,"churn_rate":20,"new_users":87,"churned_users":38,"retention":58,"nps_score":42},
+        {"month":"Jan","mrr":14000,"churn_rate":23,"new_users":76,"churned_users":44,"retention":52,"nps_score":38},
+        {"month":"Feb","mrr":13000,"churn_rate":26,"new_users":64,"churned_users":51,"retention":46,"nps_score":33},
+        {"month":"Mar","mrr":12000,"churn_rate":31,"new_users":55,"churned_users":58,"retention":41,"nps_score":28}
+      ],
+      "anomalies": [
+        "Churn rate increased 158% over 6 months",
+        "NPS dropped below 30 — critical threshold",
+        "Churned users exceeded new users in March"
+      ],
+      "quality_score": 90,
+      "warnings": []
+    },
+    "web_intel": {
+      "type": "web_intel",
+      "source": "preset_demo",
+      "url": "https://techcrunch.com/saas-churn-crisis-2026",
+      "title": "SaaS Companies Face Record Churn Rates in 2026",
+      "date": "2026-03-10",
+      "body_text": "SaaS companies across sectors are reporting unprecedented churn rates in early 2026. Industry analysts attribute this to economic pressure, increased competition, and poor onboarding experiences. Companies with NPS below 30 are seeing 2x higher churn. Experts recommend retention campaigns and pricing restructuring as immediate actions.",
+      "sentiment": "NEGATIVE",
+      "relevance": "HIGH",
+      "key_claims": [
+        "Record churn rates industry-wide in 2026",
+        "NPS below 30 correlates with 2x churn",
+        "Onboarding failures driving early cancellations",
+        "Pricing pressure from competitors intensifying"
+      ],
+      "quality_score": 80,
+      "warnings": []
+    },
+    "dashboard": {
+      "type": "dashboard",
+      "source": "preset_demo",
+      "kpis": [
+        {"name":"churn_rate","value":31.0,"trend":"UP","status":"CRITICAL"},
+        {"name":"mrr","value":12000,"trend":"DOWN","status":"CRITICAL"},
+        {"name":"retention","value":41.0,"trend":"DOWN","status":"CRITICAL"},
+        {"name":"nps_score","value":28,"trend":"DOWN","status":"CRITICAL"},
+        {"name":"new_signups","value":55,"trend":"DOWN","status":"WARNING"},
+        {"name":"support_tickets","value":247,"trend":"UP","status":"WARNING"},
+        {"name":"onboarding_completion","value":38.0,"trend":"DOWN","status":"CRITICAL"}
+      ],
+      "red_flags": [
+        "churn_rate at 31% — critical",
+        "NPS at 28 — below survival threshold",
+        "Retention at 41% — losing majority of users",
+        "Onboarding completion at 38% — broken funnel"
+      ],
+      "green_signals": [],
+      "quality_score": 95,
+      "warnings": ["All KPIs in critical or warning state"]
+    }
+  },
+  
+  "planted_contradiction": {
+    "metric": "churn_rate",
+    "source_a": { "type": "document", "value": 28.0 },
+    "source_b": { "type": "structured", "value": 31.0 },
+    "resolution": "CSV data is more recent (March 2026) vs PDF report (February 2026). Trusting CSV value of 31% as authoritative.",
+    "trusted_value": 31.0,
+    "confidence": "HIGH"
+  }
+}
